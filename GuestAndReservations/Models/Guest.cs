@@ -13,6 +13,7 @@ namespace GuestAndReservations.Models
         [Required]
         public string SurName { get; set; }
         [Required]
+        [EmailAddress]
         public string EMail { get; set; }
         [Required]
         public int ID { get; set; }
@@ -20,6 +21,7 @@ namespace GuestAndReservations.Models
         public DateTime? DateOfBirth { get; set; }
         public int ZipCode { get; set; }
 
+        [Phone]
         public int PhoneNumber { get; set; }
         public string Address { get; set; }
         public string City { get; set; }

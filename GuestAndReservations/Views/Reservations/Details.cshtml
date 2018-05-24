@@ -1,7 +1,63 @@
 ﻿
+
 @{
     ViewBag.Title = "Details";
+    Layout = "/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Szczegóły rezerwacji</h2>
+
+
+
+
+<table class=" table table-bordered table-hover">
+    <tr>
+
+        <th>Kod rezerwacji</th>
+        <th>Id</th>
+        <th>Data utworzenia rezerwacji</th>
+        <th>Data zameldowania</th>
+        <th>Data wymeldowania</th>
+        <th>Cena</th>
+        <th>Waluta</th>
+        <th>Prowizja</th>
+        <th>Źródło</th>
+
+    </tr>
+    <tbody>
+        
+
+
+        <tr>
+
+            <td>@Model.ReservationCode</td>
+            <td>@Model.ID</td>
+            <td>@Model.CreationDateOfReservation.ToShortDateString()</td>
+            <td>@Model.CheckInDate.ToShortDateString()</td>
+            <td>@Model.CheckOutDate.ToShortDateString()</td>
+            <td>@Model.Price</td>
+            <td>@Model.Currency</td>
+            <td>@Model.Commission</td>
+            <td>@Model.Source</td>
+        </tr>
+        
+    </tbody>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
